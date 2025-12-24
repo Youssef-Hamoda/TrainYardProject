@@ -1,0 +1,99 @@
+test: help
+help
+
+test: append on empty
+append "The Engine"
+
+test: base append
+append "Crew Cabin"
+
+test: delete final car
+delete 1
+
+test: delete invalid index
+delete 1
+
+test: delete head
+delete 0
+
+test: delete invalid index 2
+delete 0
+
+test: print empty train
+print
+
+test: search empty train
+search "tomatoes"
+
+test: search no input
+search
+
+test: insert empty train
+insert 0 "Bandana Waddle Dee"
+
+test: insert new head
+insert 0 "Kirby"
+
+test: insert at size
+insert 2 "King Dedede"
+
+test: insert in middle
+insert 2 Magalor
+
+test: print (no cargo)
+print
+
+test: search (no cargo)
+search "Waddle Dee"
+
+test: adding cargo
+goods add 0 "fire powerup" 1
+goods add 1 "spears" 35
+print
+
+test: set cargo
+goods set 2 "cool cape" 1
+goods set 3 "wadDle dee" 340
+print
+
+test: invalid add
+goods add 4
+goods add 0 "Waddle Dee" 100
+goods add 0 "fire powerup" -1
+print
+
+test: set
+goods set 0 "waddle dee" 245
+goods set 2 "cool ship" 0
+print
+
+test: invalid set
+goods set 2 "cool cape" -20
+print
+
+test: remove
+goods remove 1 "SpEars" 15
+
+test: remove goods (to empty)
+goods remove 1 "spEaRs" 20
+print
+
+goods add 1 "Maximato" 1
+
+test: remove invalid good
+goods remove 2 "cool cape" 0
+
+test: remove 0 from 0
+goods remove 2 "cool ship" 0
+
+test: remove invalid quantity
+goods remove 0 "fire powerup" 2
+
+test: search (single car)
+search "maximato"
+
+test: search (mult car)
+goods set 0 "Waddle dee" 145
+search "waddle dee"
+
+exit
